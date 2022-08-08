@@ -1,4 +1,33 @@
 import createHome from './home';
+import createMenu from './menu';
+import createContact from './contact';
+
+const switchTab = (e) => {
+    if (e.target.classList.contains('active')) return;
+
+    const main = document.querySelector('.main');
+    main.replaceChildren();
+
+    const tabs = document.querySelectorAll('.tab');
+    for (const tab of tabs) {
+        tab.classList.remove('active');
+    }
+    e.target.classList.add('active');
+
+    switch (e.target.textContent) {
+        case 'Home':
+            createHome();
+            break;
+        case 'Menu':
+            createMenu();
+            break;
+        case 'Contact':
+            createContact();
+            break;
+        default:
+            break;
+    }
+}
 
 const createHeader = () => {
     const header = document.createElement('header');
@@ -15,6 +44,7 @@ const createHeader = () => {
     tab.classList.add('tab');
 
     const homeTab = tab.cloneNode();
+    homeTab.classList.add('active');
     homeTab.textContent = 'Home';
     tabs.appendChild(homeTab);
 
@@ -25,6 +55,8 @@ const createHeader = () => {
     const contactTab = tab.cloneNode();
     contactTab.textContent = 'Contact';
     tabs.appendChild(contactTab);
+
+    tabs.addEventListener('click', switchTab);
 
     header.appendChild(tabs);
 
