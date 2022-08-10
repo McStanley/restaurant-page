@@ -19,10 +19,12 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     color: white;
 }
 
 .header {
+    width: 100%;
     padding: 10px 0 0;
     background-color: rgba(0, 0, 0, 0.9);
     display: grid;
@@ -57,22 +59,40 @@ h2 {
 }
 
 .main {
-    margin: 50px auto;
+    margin: 50px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     background-color: rgba(0, 0, 0, 0.9);
-    max-width: 500px;
+    max-width: 600px;
     padding: 50px 80px;
     border: 1px solid rgb(69, 69, 69);
 }
 
 .footer {
+    width: 100%;
     padding: 15px 0;
     display: grid;
     place-content: center;
     background-color: rgba(0, 0, 0, 0.9);
     font-size: 1.1rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.menu-item {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(0, 0, 0, 0.9);
+    font-size: 1.4rem;
+    padding: 5px;
 }
