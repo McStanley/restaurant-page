@@ -13,10 +13,11 @@ p {
 
 a {
     color: inherit;
-    margin-bottom: 5px;
 }
 
 img {
+    display: block;
+    max-height: 100%;
     max-width: 100%;
 }
 
@@ -84,9 +85,11 @@ h3 {
 
 .footer {
     width: 100%;
-    padding: 15px 0;
-    display: grid;
-    place-content: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background-color: rgba(0, 0, 0, 0.9);
     font-size: 1.1rem;
 }
@@ -123,4 +126,12 @@ figcaption {
 .contact-section p,
 .contact-section a {
     font-size: 1.1rem;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.github-mark {
+    height: 24px;
 }

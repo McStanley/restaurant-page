@@ -1,6 +1,7 @@
 import createHome from './home';
 import createMenu from './menu';
 import createContact from './contact';
+import GithubMark from './assets/GitHub-Mark-Light-32px.png';
 
 const switchTab = (e) => {
     if (e.target.classList.contains('active')) return;
@@ -77,6 +78,17 @@ const createFooter = () => {
     const footerText = document.createElement('p');
     footerText.textContent = 'Copyright © 2022 by Stanisław Olejniczak';
     footer.appendChild(footerText);
+
+    const githubAnchor = document.createElement('a');
+    githubAnchor.setAttribute('href', 'https://github.com/McStanley');
+    githubAnchor.setAttribute('target', '_blank');
+
+    const githubMark = document.createElement('img');
+    githubMark.classList.add('github-mark');
+    githubMark.src = GithubMark;
+    githubAnchor.appendChild(githubMark);
+
+    footer.appendChild(githubAnchor);
 
     return footer;
 }
