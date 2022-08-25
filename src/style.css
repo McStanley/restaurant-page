@@ -62,12 +62,17 @@ h3 {
     background-color: transparent;
     color: inherit;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    color: peru;
 }
 
 .tab.active {
     border-bottom: 2px solid white;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .main {
